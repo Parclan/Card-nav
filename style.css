@@ -1,0 +1,175 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+*{
+    box-sizing: border-box;
+}
+
+.youtube{
+    --bg-color-logo: #fff;
+    --bg-color: #ff0000;
+    --bg-color-light: #e2fced;   
+} 
+
+.facebook{
+    --bg-color-logo: white;
+    --bg-color: #3b5998;
+    --bg-color-light: #e2fced;   
+} 
+
+.github{
+    --bg-color-logo: white;
+    --bg-color: #171515;
+    --bg-color-light: #e2fced;   
+} 
+
+.spotify{
+    --bg-color-logo: black;
+    --bg-color: #1ed761;
+    --bg-color-light: #e2fced;   
+} 
+
+.padre{
+    display: flex;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.madre{
+    display: flex;
+    width: 800px;
+    height: 370px;
+    padding: 10px;
+    margin: 0 auto;    
+}
+
+.madre a{
+    display: flex;
+    padding: 10px;
+    width:200px;
+    margin: 10px;
+    background-color: rgb(0, 0, 0);
+    border :2px solid rgb(255, 255, 255);
+}
+
+.logo {
+    z-index: 10000;
+    font-size: 55px !important;
+}
+
+.card {
+    color: var(--bg-color-light);
+    width: 220px;
+    height: 321px;
+    border-top-right-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0,10);
+    transition: all 0.28s ease-out;
+    text-decoration: none;
+}
+
+.card:hover{
+    transform: translateY(-10px) scale(1.009) translate(0);
+    box-shadow:  0 44px 54px var(--bg-color);
+    color: var(--bg-color-logo)
+}
+
+.card:hover .overlay{
+    transform: scale(5) translateZ(0);
+}
+
+.card:hover .circule{
+    border-color: var(--bg-color-light);
+    background: var(--bg-color);
+}
+
+.card:hover .circule:after{
+    background: var(--bg-color-light);
+}
+
+.card:hover p{
+    color:#fff;
+    font-family:'Courier New', Courier, monospace;
+    font-style: initial;
+    font-size: 20px;
+}
+
+.card p{
+    font-size: 17px;
+    color: var(--bg-color);
+    font-family:'Courier New', Courier, monospace;
+    font-style: initial;
+    margin-top: 30px;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+}
+
+.circule{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--bg-color);
+    display: flex;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+}
+
+.circule::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background: var(--bg-color);
+    border-radius: 100%;
+    transition: color 0.3s ease-out;
+}
+
+.overlay{
+    width: 100px;
+    position: absolute;
+    height: 100px;
+    border-radius: 100%;
+    background: var(--bg-color);
+    top: 76px;
+    z-index: 0;
+    transition: 0.3s ease-out;
+}
+
+.navegador{ 
+    display: flex;
+    padding: 20px;
+    margin: 10px;
+    justify-content: end;
+}
+
+.navegador button {
+    height: 40px;
+    background-color: cornflowerblue;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50px;
+    font-size: 20px;
+    transition: 1s;
+}
+
+.navegador button:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px 4px white;
+    transition: 1.1s;
+}
+
+.jose{
+    position: absolute;
+    top: 92%;
+    left: 87%;
+    padding: 2px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 0 12px 8px #1ed761;
+}
+
